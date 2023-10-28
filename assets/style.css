@@ -1,0 +1,9 @@
+.nav-wrapper {
+    background-color: blue;
+    background-image: linear-gradient(to right, #027db9 , rgb(0, 0, 144));
+    font-weight: bold;
+}
+
+.btn-flat {
+    font-style: italic;
+}
