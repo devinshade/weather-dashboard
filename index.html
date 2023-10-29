@@ -8,25 +8,27 @@
         <title>Weather Dashboard</title>
     </head>
     <body>
+        <!-- top nav area -->
         <nav>
             <div class="nav-wrapper row">
               <a href="#" class="brand-logo container col s6 offset-s6"><span class="flow-text">Weather Dashboard</span></a>
             </div>
         </nav>
+        <!-- search area -->
         <section class="row">
             <div class="search-wrapper container col s4">
                 <h2 class="flow-text">Search for a City:</h2>
-                <form>
+                <form id="search-form">
                 <div class="input-field">
-                    <input id="search" type="search" required>
-                    <!-- <label class="label-icon" for="search"><i class="material-icons">search</i></label> -->
+                    <input id="search" type="text" required>
                     <i class="material-icons"><button class="btn-flat">search</button></i>
                 </div>
                 </form>
             </div>
-            <article id="city" class="container row col s12 m2">
-                <div class="z-depth-3">
-                    <h3>🌞</h3>
+            <!-- city weather overview -->
+            <article id="city" class="container row col s12 m7">
+                <div id='current-weather' class="z-depth-3">
+                    <!-- <h3><span id="result-text"> 🌞</span></h3> -->
                     <ul>
                         <li>Temp:</li>
                         <li>Wind:</li>
@@ -34,9 +36,26 @@
                     </ul>
                 </div>
             </article>
-            <div id="forecast"></div>
         </section>
+        <section>
+            <div class="section row">
+            <h3 class="flow-text center col s10">5 Day Forecast:</h3>
+            <div id="result-content"></div>
+        </section>
+        <!-- list of recently searched cities -->
+        <section id="recent-search" class="row container left">
+        <div class="col s5">
+            <ul class="collection">
+                <li class="collection-item"><a href="search">Alvin</a></li>
+                <li class="collection-item acive"><a href="search">Alvin</a></li>
+                <li class="collection-item"><a href="search">Alvin</a></li>
+                <li class="collection-item"><a href="search">Alvin</a></li>
+              </ul>
+        </div>
+        </section>
+        
     </body>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/script.js"></script>
 </html>
