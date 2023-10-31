@@ -50,7 +50,6 @@ function getForecast(lat, lon) {
             }
             console.log(forecastArray)
         }
-
     })
 }
 
